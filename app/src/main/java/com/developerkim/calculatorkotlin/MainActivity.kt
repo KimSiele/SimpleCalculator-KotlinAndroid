@@ -11,7 +11,7 @@ import java.lang.StringBuilder
 
 class MainActivity : AppCompatActivity() {
 
-//    private lateinit var binding:ActivityMainBinding
+
     private var operaton = ""
     private var value1:Double = 0.0
     private var value2:Double = 0.0
@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        stringBuilder = StringBuilder()
+
+        stringBuilder = StringBuilder() //to append values
 
         btnZero.setOnClickListener{buttonClick(btnZero)}
         btnOne.setOnClickListener{buttonClick(btnOne)}
@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         btnEqual.setOnClickListener { buttonEqual() }
     }
+//     Handling clicks
     fun buttonClick(view: View){
 
         var value = etxtResult.text.toString()
@@ -123,7 +124,7 @@ class MainActivity : AppCompatActivity() {
 
         txtProcess.text = stringBuilder
     }
-
+// Method to perform math operations
     fun math(view: View){
 
         when(view){
